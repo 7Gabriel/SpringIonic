@@ -11,12 +11,19 @@
 
 
 <ion-content padding>
-    <ion-list>
-        <button ion-item *ngFor="let item of items">
-          <ion-thumbnail item-start>
-            <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
-          </ion-thumbnail>
-          <h2>{{ item.nome }}</h2>
-        </button>
-      </ion-list>
+    
+    <button ion-card *ngFor="let item of items">
+        <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
+        <ion-card-content>
+          <ion-card-title>
+              {{ item.nome }}
+            </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely
+            responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+    </button>
+    
+   
 </ion-content>
